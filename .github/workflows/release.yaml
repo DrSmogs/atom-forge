@@ -84,7 +84,7 @@ jobs:
         include:
           - platform: web
             targets: wasm32-unknown-unknown
-            profile: release
+            profile: web-release
             binary_ext: .wasm
             package_ext: .zip
             runner: ubuntu-latest
@@ -162,11 +162,11 @@ jobs:
         if: ${{ matrix.platform == 'web' }}
         run: |
           cargo install --git=https://github.com/TheBevyFlock/bevy_cli --locked bevy_cli
-          bevy build --locked --release --yes web --bundle
+          bevy build --locked --profile='${{ matrix.profile }}' --no-default-features --features='${{ matrix.features }}' --yes web --bundle
 
-      - name: Move web bundle (Web)
+      - name: Add web bundle to app (Web)
         if: ${{ matrix.platform == 'web' }}
-        run: mv 'target/bevy_web/web-release/${{ env.cargo_build_binary_name }}' '${{ env.app }}'
+        run: mv 'target/bevy_web/${{ matrix.profile }}/${{ env.cargo_build_binary_name }}' '${{ env.app }}'
 
       - name: Build binaries (non-Web)
         if: ${{ matrix.platform != 'web' }}
