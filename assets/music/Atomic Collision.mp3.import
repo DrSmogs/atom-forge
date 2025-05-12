@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crkacos581w8k"
+path="res://.godot/imported/Atomic Collision.mp3-38c1b20873fa798c39e1faa4c9ce7d8e.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Atomic Collision.mp3"
+dest_files=["res://.godot/imported/Atomic Collision.mp3-38c1b20873fa798c39e1faa4c9ce7d8e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
