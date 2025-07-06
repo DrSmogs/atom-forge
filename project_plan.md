@@ -1,5 +1,8 @@
 # Atom Forge - Game Development Plan
 
+![image](https://github.com/user-attachments/assets/b742ae40-93ab-43a8-bf6a-d67bbdf69128)
+
+
 **Genre**: Roguelike Reactor Management Shooter
 **Engine**: Godot 4.x
 **Theme**: 1980s Soviet CRT retro tech meets particle physics
